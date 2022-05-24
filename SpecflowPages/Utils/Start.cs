@@ -20,9 +20,11 @@ namespace MarsQA_1.Utils
         {
             //launch the browser
             Initialize();
-            ExcelLibHelper.PopulateInCollection(@"SpecflowTests\Data\Mars.xlsx", "Credentials");
+            ExcelLibHelper.PopulateInCollection(@"C:\Users\JR.Mateo\MVP\MarsQA\onboarding.specflow\MarsQA-1\SpecflowTests\Data\Mars.xlsx", "Credentials");
             //call the SignIn class
             SignIn.SigninStep();
+
+            
         }
 
         [AfterScenario]
@@ -35,7 +37,7 @@ namespace MarsQA_1.Utils
             
             
             //Close the browser
-            Close();
+          //  Close();
              
             // end test. (Reports)
           //  CommonMethods.Extent.EndTest(test);

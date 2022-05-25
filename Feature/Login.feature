@@ -1,4 +1,4 @@
-﻿Feature: Login
+﻿Feature: MarsQA
 As a Seller
 I want the feature to add my Profile Details
 So that

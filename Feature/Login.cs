@@ -93,7 +93,7 @@ namespace MarsQA_1.Feature
          // Assertions for  User's Earn Target
 
             string newEarnTarget = profileDetailsPageObj.GetAddedEarnTarget();
-            Console.WriteLine("Hours:  " + newEarnTarget);
+            Console.WriteLine("Earn Target:  " + newEarnTarget);
             Assert.That(newEarnTarget == "More than $1000 per month", "Actual earn target  and expected earn target  do not match");
 
 

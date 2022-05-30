@@ -75,12 +75,12 @@ namespace MarsQA_1.Feature
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Seller is able to  add entry in Skills tab with valid details")]
+        [NUnit.Framework.DescriptionAttribute("Seller is able to  add entry in Certfications tab with valid details")]
         [NUnit.Framework.CategoryAttribute("AddCertficationDetails")]
         [NUnit.Framework.TestCaseAttribute("CERTIFIED TESTER FOUNDATION LEVEL (CTFL)", "ISTQB", "2018", null)]
         [NUnit.Framework.TestCaseAttribute("Certified Tester Advanced Level Test Analyst (CTAL-TA)", "ISTQB", "2019", null)]
         [NUnit.Framework.TestCaseAttribute("Certified Tester Test Automation Engineer (CT-TAE)", "ISQTB", "2022", null)]
-        public virtual void SellerIsAbleToAddEntryInSkillsTabWithValidDetails(string certificate, string from, string year, string[] exampleTags)
+        public virtual void SellerIsAbleToAddEntryInCertficationsTabWithValidDetails(string certificate, string from, string year, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "AddCertficationDetails"};
@@ -89,7 +89,7 @@ namespace MarsQA_1.Feature
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             string[] tagsOfScenario = @__tags;
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to  add entry in Skills tab with valid details", null, @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to  add entry in Certfications tab with valid details", null, @__tags);
 #line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -127,12 +127,12 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Seller is able to  edit entry in Skills tab with valid details")]
+        [NUnit.Framework.DescriptionAttribute("Seller is able to  edit entry in Certifications tab with valid details")]
         [NUnit.Framework.CategoryAttribute("UpdateCertificationsTab")]
         [NUnit.Framework.TestCaseAttribute("Edited_CERTIFIED TESTER FOUNDATION LEVEL (CTFL)", "ISTQB", "2015", null)]
         [NUnit.Framework.TestCaseAttribute("Modified_Certified Tester Advanced Level Test Analyst (CTAL-TA)", "ISTQB", "2017", null)]
         [NUnit.Framework.TestCaseAttribute("Updated_Certified Tester Test Automation Engineer (CT-TAE)", "ISQTB", "2021", null)]
-        public virtual void SellerIsAbleToEditEntryInSkillsTabWithValidDetails(string certificate, string from, string year, string[] exampleTags)
+        public virtual void SellerIsAbleToEditEntryInCertificationsTabWithValidDetails(string certificate, string from, string year, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "UpdateCertificationsTab"};
@@ -141,7 +141,7 @@ this.ScenarioInitialize(scenarioInfo);
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             string[] tagsOfScenario = @__tags;
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to  edit entry in Skills tab with valid details", null, @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to  edit entry in Certifications tab with valid details", null, @__tags);
 #line 21
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -173,6 +173,51 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 25
  testRunner.Then(string.Format("The Certifications should have the updated  \'{0}\' , \'{1}\', \'{2}\'", certificate, from, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Seller is able to  delete entry in Certifications tab with valid details")]
+        [NUnit.Framework.CategoryAttribute("DeleteCertification")]
+        public virtual void SellerIsAbleToDeleteEntryInCertificationsTabWithValidDetails()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "DeleteCertification"};
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to  delete entry in Certifications tab with valid details", null, new string[] {
+                        "DeleteCertification"});
+#line 34
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 35
+ testRunner.Given("I login to the website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 36
+ testRunner.When("I navigate to Certifications Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 37
+ testRunner.And("I delete  a Certification", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 38
+ testRunner.Then("The Certification should have been deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace MarsQA_1.SpecflowPages.Pages.ProfileDetails
 {
     public class CertificationsTab
-    {   
+    {
 
         private static IWebElement navToCertsTab => Driver.driver.FindElement(By.XPath("//A[@class='item'][text()='Certifications']"));
         private static IWebElement addNewButtonCert => Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//div[@class='ui teal button ']"));
@@ -20,13 +20,20 @@ namespace MarsQA_1.SpecflowPages.Pages.ProfileDetails
         private static IWebElement addButtonCert => Driver.driver.FindElement(By.XPath("//INPUT[@type='button'][1]"));
         private static IWebElement editButtonCert => Driver.driver.FindElement(By.XPath("//*[@class = 'ui fixed table']/tbody[1]/tr/td[4]/span[1]"));
         private static IWebElement updateButtonCert => Driver.driver.FindElement(By.XPath("//*[@colspan='4']//input[@value='Update']"));
+        private static IWebElement deleteButtonCert => Driver.driver.FindElement(By.XPath("//*[@class = 'ui fixed table']/tbody[1]/tr/td[4]/span[2]"));
         
-        public static IWebElement actualCerts => Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//tbody[last()]/tr/td[1]"));
-        public static IWebElement actualCertsFrom => Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//tbody[last()]/tr/td[2]"));
-        public static IWebElement actualCertsYear => Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//tbody[last()]/tr/td[3]"));
-        public static IWebElement editedCerts => Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//tbody[(1)]/tr/td[1]"));
-        public static IWebElement editedCertsFrom => Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//tbody[(1)]/tr/td[2]"));
-        public static IWebElement editedCertsYear => Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//tbody/tr/td[3]"));
+        private static IWebElement actualCerts => Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//tbody[last()]/tr/td[1]"));
+        private static IWebElement actualCertsFrom => Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//tbody[last()]/tr/td[2]"));
+        private static IWebElement actualCertsYear => Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//tbody[last()]/tr/td[3]"));
+        private static IWebElement editedCerts => Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//tbody[(1)]/tr/td[1]"));
+        private static IWebElement editedCertsFrom => Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//tbody[(1)]/tr/td[2]"));
+        private static IWebElement editedCertsYear => Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//tbody/tr/td[3]"));
+
+        private static IWebElement deletedCert=> Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//tbody[(1)]/tr/td[1]"));
+        private static IWebElement updatedFirstCert => Driver.driver.FindElement(By.XPath("//*[@data-tab='fourth']//tbody[(1)]/tr/td[1]"));
+
+
+
 
 
 
@@ -77,6 +84,16 @@ namespace MarsQA_1.SpecflowPages.Pages.ProfileDetails
 
 
         }
+
+        public void DeleteCerts()
+        {
+
+            deleteButtonCert.Click();
+
+
+        }
+
+
        
 
         public string GetAddedCerts()
@@ -119,6 +136,16 @@ namespace MarsQA_1.SpecflowPages.Pages.ProfileDetails
             return editedCertsYear.Text;
         }
 
+        public string GetToDeleteCerts()
+        {
+            return deletedCert.Text;
+        }
 
+        public string GetTheUpdatedFirsCert()
+        {
+            Thread.Sleep(1000);
+            return updatedFirstCert.Text;
+
+        }
     }
 }

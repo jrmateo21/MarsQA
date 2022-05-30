@@ -18,7 +18,7 @@ namespace MarsQA_1.Pages
             Password.SendKeys(ExcelLibHelper.ReadData(2, "password"));
             LoginBtn.Click();
         }
-        public static void Login()
+        public static void Login(string email, string password)
         {
             Driver.NavigateUrl();
 
@@ -26,10 +26,10 @@ namespace MarsQA_1.Pages
             Driver.driver.FindElement(By.XPath("//A[@class='item'][text()='Sign In']")).Click();
 
             //Enter Username
-            Driver.driver.FindElement(By.XPath("(//INPUT[@type='text'])[2]")).SendKeys("");
+            Driver.driver.FindElement(By.XPath("(//INPUT[@type='text'])[2]")).SendKeys(email);
 
             //Enter password
-            Driver.driver.FindElement(By.XPath("//INPUT[@type='password']")).SendKeys("");
+            Driver.driver.FindElement(By.XPath("//INPUT[@type='password']")).SendKeys(password);
 
             //Click on Login Button
             Driver.driver.FindElement(By.XPath("//BUTTON[@class='fluid ui teal button'][text()='Login']")).Click();

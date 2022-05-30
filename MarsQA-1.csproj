@@ -150,18 +150,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Feature\Login.cs" />
+    <Compile Include="SpecflowPages\Pages\ProfileDetails\CertificationsTab.cs" />
+    <Compile Include="SpecflowPages\Pages\ProfileDetails\EducationTab.cs" />
+    <Compile Include="StepDefinitions\CertificationStepDefinitions.cs" />
+    <Compile Include="StepDefinitions\EducationStepDefinitions.cs" />
+    <Compile Include="StepDefinitions\LanguagesStepDefinitions.cs" />
+    <Compile Include="StepDefinitions\Login.cs" />
     <Compile Include="SpecflowPages\Helpers\CommonMethods.cs" />
     <Compile Include="SpecflowPages\Helpers\ConstantHelpers.cs" />
     <Compile Include="SpecflowPages\Helpers\Driver.cs" />
     <Compile Include="SpecflowPages\Helpers\ExcelLibHelper.cs" />
-    <Compile Include="SpecflowPages\Pages\ProfileDetailsPage.cs" />
+    <Compile Include="SpecflowPages\Pages\ProfileDetails\LanguagesTab.cs" />
+    <Compile Include="SpecflowPages\Pages\ProfileDetails\SkillsTab.cs" />
     <Compile Include="SpecflowPages\Pages\SignIn.cs" />
     <Compile Include="SpecflowPages\Utils\Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StepDefinitions\SkillsStepDefinitions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Feature\Certification.feature" />
+    <None Include="Feature\Education.feature" />
+    <None Include="Feature\Languages.feature" />
+    <None Include="Feature\Skills.feature" />
     <None Include="Feature\Login.feature" />
     <None Include="SpecflowTests\Data\Data.xlsx" />
     <None Include="packages.config" />

@@ -1,16 +1,24 @@
-﻿Feature: MarsQA
+﻿Feature: Login
 As a Seller
-I want the feature to add my Profile Details
-So that
-The people seeking for some skills can look into my details.
+I want to log in so that I can see  my profiles
+
 
 @LogIntoWebsite
 Scenario: Login to website
 	Given I login to the website
 
 
-@AddProfileDetails
-Scenario: Seller is able to add the Profile Details
-	Given I login to the website
-	When  I create a new Profile Details
-	Then  The Profile Details should be created successfully
+@LogIntoWebsiteDataDriven
+Scenario Outline: Login to website-DD
+	Given  I login to the website using  '<Email>' and '<Password>'
+	
+		Examples: 
+		| Email                 | Password   |
+		| jewhy27@gmail.com     | Windows_27 |
+		| lakaka9900@dufeed.com | Test123    |
+
+
+
+
+
+

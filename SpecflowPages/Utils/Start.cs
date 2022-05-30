@@ -22,7 +22,7 @@ namespace MarsQA_1.Utils
             Initialize();
             ExcelLibHelper.PopulateInCollection(@"C:\Users\JR.Mateo\MVP\MarsQA\onboarding.specflow\MarsQA-1\SpecflowTests\Data\Mars.xlsx", "Credentials");
             //call the SignIn class
-            SignIn.SigninStep();
+           // SignIn.SigninStep();
 
             
         }
@@ -37,7 +37,7 @@ namespace MarsQA_1.Utils
             
             
             //Close the browser
-          //  Close();
+          // Close();
              
             // end test. (Reports)
           //  CommonMethods.Extent.EndTest(test);
